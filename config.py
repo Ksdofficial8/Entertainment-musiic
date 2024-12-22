@@ -12,10 +12,13 @@ load_dotenv()
 # -----------------------------------------------------
 # Get the API_ID and ensure it is a valid integer
 try:
-    API_ID = int(os.getenv("API_ID", "26598255").strip())
+    API_ID = int(os.getenv("API_ID", "12345").strip())
 except ValueError:
-    raise ValueError("Invalid value for API_ID. Ensure it is a valid integer.")
-API_HASH = getenv("API_HASH")
+    print("Falling back to default API_ID")
+    API_ID = 12345  # Default fallback value
+
+API_HASH = os.getenv("API_HASH")
+print(f"API_ID: {API_ID}, API_HASH: {API_HASH}")
 # ------------------------------------------------------
 BOT_TOKEN = getenv("BOT_TOKEN")
 # -------------------------------------------------------
