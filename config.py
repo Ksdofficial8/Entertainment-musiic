@@ -1,6 +1,8 @@
 import os
 import re
 from os import getenv
+export API_ID=27838385
+export API_HASH=0710bd2a89a41c3506f98f7e6fd7294a
 # ------------------------------------
 # ------------------------------------
 from dotenv import load_dotenv
@@ -14,10 +16,10 @@ load_dotenv()
 try:
     API_ID = int(os.getenv("API_ID", "27838385").strip())
 except ValueError:
-    print("Falling back to default API_ID")
-    API_ID = 27838385  # Default fallback value
-    API_HASH = 0710bd2a89a41c3506f98f7e6fd7294a # Default fallback value
-API_HASH = os.getenv("API_HASH", "0710bd2a89a41c3506f98f7e6fd7294a" )
+    print("Falling back to default API_ID")
+    API_ID = 27838385  # Default fallback value
+
+API_HASH = os.getenv("API_HASH", "0710bd2a89a41c3506f98f7e6fd7294a")
 print(f"API_ID: {API_ID}, API_HASH: {API_HASH}")
 # ------------------------------------------------------
 BOT_TOKEN = getenv("BOT_TOKEN")
