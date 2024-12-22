@@ -9,7 +9,11 @@ from pyrogram import filters
 load_dotenv()
 # ------------------------------------
 # -----------------------------------------------------
-API_ID = int(getenv("API_ID", "12345"))
+# Get the API_ID and ensure it is a valid integer
+try:
+    API_ID = int(os.getenv("API_ID", "12345").strip())
+except ValueError:
+    raise ValueError("Invalid value for API_ID. Ensure it is a valid integer.")
 API_HASH = getenv("API_HASH")
 # ------------------------------------------------------
 BOT_TOKEN = getenv("BOT_TOKEN")
