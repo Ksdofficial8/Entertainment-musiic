@@ -1,8 +1,8 @@
 import os
 import re
 from os import getenv
-export API_ID = "27838385"
-export API_HASH = "0710bd2a89a41c3506f98f7e6fd7294a"
+API_ID = "27838385"
+API_HASH = "0710bd2a89a41c3506f98f7e6fd7294a"
 # ------------------------------------
 # ------------------------------------
 from dotenv import load_dotenv
